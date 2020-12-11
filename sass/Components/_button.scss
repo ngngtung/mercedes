@@ -1,0 +1,13 @@
+.carousel__tittle {
+    button{
+        @include styleButton($color-black-0,$color-black-0,$pd-1,$pd-2)
+        @include styleText($fs-1,$color-gray-0,$fw-bold-0)      
+    }
+}
+
+.carousel__tittle {
+    button{
+        @include styleButton($color-black-0,$color-black-0,$pd-1,$pd-2)
+        @include styleText($fs-1,$color-gray-0,$fw-bold-0)      
+    }
+}

@@ -1,0 +1,27 @@
+.searchBar{
+    width: 85%;
+    margin: auto;
+    .input-group{
+        height: 50px;
+        .form-control{
+            border: white;
+        }
+        .button{
+            background-color: white;
+            &:active{
+                i{
+                    color: $color-blue-0;
+                }
+            }
+            .btn-outline-secondary {
+                color: #6c757d;
+                background-color: transparent;
+                background-image: none;
+                border-color: white;
+                i{
+                    font-size: $fs-1;
+                }
+            }
+        }
+    }
+}

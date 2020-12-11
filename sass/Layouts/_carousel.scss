@@ -1,0 +1,159 @@
+.carousel {
+    position: relative;
+    .carousel__tittle{
+        position: absolute;
+        width: 40%;
+        left: 100px;
+        top: 100px;
+
+        .a__content {
+            text-decoration: none;
+            @include styleText($fs-2,$color-white-0,$fw-bold-0)            
+        }
+        button{
+            margin-top: 20px;
+            a{
+                text-decoration: none;
+                color: $color-gray-0;
+            }
+        }
+    }    
+    .carousel__item{
+        max-height: 715px;
+    }
+    .owl-nav {
+        .owl-prev{
+            left: 50px;
+            position: absolute;
+            bottom: 50%;
+            &:hover{
+                background-color: transparent;
+                color: rgb(214, 214, 214);
+            }
+            &:focus{
+                outline: none;
+            }
+            &:active{
+                color: $color-blue-1;              
+            }
+            span {
+                height: 100px;
+                width: 1000px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                font-size: 100px;
+            }
+        }
+
+        .owl-next{
+            position: absolute;
+            height: 100px;
+            right: 50px;
+            bottom: 50%;
+            &:hover{
+                background-color: transparent;
+                color: rgb(214, 214, 214);
+            }
+            &:focus{
+                outline: none;
+            }
+            &:active{
+                color: $color-blue-1;
+            }
+            span {
+                font-size: 100px;
+                height: 100%;
+            }
+        }
+    }
+    .owl-dots{
+        visibility: hidden;
+    }
+}
+
+// responsive
+@include responsive('extra-large'){
+    .carousel {
+        .carousel__tittle{
+            width: 50%;
+            button{
+                font-size: 15px;
+                margin-top: 5px;
+            }
+        }
+    }
+}
+
+@include responsive('large'){
+    .carousel{
+        .carousel__tittle{
+            .a__content{
+                font-size: 24px;
+                p{
+                    width: 301px;
+                }
+            }
+        }
+    }
+}
+
+@include responsive('small'){
+    .carousel__content{
+        height: 370px;
+    }
+    .carousel{
+        .carousel__tittle{
+            position: absolute;
+            padding: 20px;
+            width: 110%;
+            background-color: $color-white-0;
+            left: 0px;
+            top: 195px;
+            .a__content{
+                color: $color-black-0;
+                p{
+                    width: 370px;
+                }
+            }
+        }
+        .owl-nav {
+            .owl-prev{
+                left: 20px;
+                position: absolute;
+                bottom: 70%;
+                &:hover{
+                    background-color: transparent;
+                    color: rgb(214, 214, 214);
+                }
+                &:focus{
+                    outline: none;
+                }
+                &:active{
+                    color: $color-blue-1;              
+                }
+                span {
+                    font-size: 50px;
+                }
+            }
+    
+            .owl-next{
+                position: absolute;
+                right: 20px;
+                bottom: 64%;
+                &:hover{
+                    background-color: transparent;
+                    color: rgb(214, 214, 214);
+                }
+                &:focus{
+                    outline: none;
+                }
+                &:active{
+                    color: $color-blue-1;
+                }
+                span {
+                    font-size: 50px;
+                }
+            }
+        }
+    }
+}

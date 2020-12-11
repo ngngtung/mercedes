@@ -1,0 +1,95 @@
+.intro{
+    width: 85%;
+    margin: auto;
+    .intro__tittle{
+        h2{
+            font-weight: $fw-bold-1;
+        }
+        p{
+            padding-top: 10px;
+            width: 70%;
+            line-height: $line-height-1;
+            word-spacing: 2px;
+        }
+        button {
+            margin-top: 2rem;
+            @include styleButton($color-blue-0,$color-blue-0,$pd-1,$pd-2);
+            &:hover{
+                @include styleButton($color-blue-1,$color-blue-1,$pd-1,$pd-2);
+                }
+            a{
+                text-decoration: none;
+                @include styleText($fs-1,$color-white-0,$fw-normal);
+            }
+        }
+    }
+    
+    .intro__logo{
+        .row{
+            margin: 100px 0;
+            .col,.col-md-3{
+                padding: 0 7px;
+            }
+            .col{
+                // height: 170px;
+                a{
+                    position: relative;
+                    img{
+                        width: 100%;
+                    }
+                    .height{
+                        position: absolute;
+                        bottom: -78px;
+                        height: 0px;
+                        width: 100%;
+                        background-color: $color-blue-0;
+                        opacity: 0;
+                        transition: all .5s;
+                        }
+                    &:hover{
+                        .height{
+                            opacity: 1;
+                            height: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// responsive
+@include responsive('small'){
+    .intro{
+        .intro__tittle{
+            h2{
+                font-size: $fs-1;
+            }
+            p{
+                width: 100%;
+                text-align: justify;
+            }
+            button{
+                width: 100%;
+            }
+        }
+    }
+}
+@include responsive('medium'){
+    .intro{
+        .intro__tittle{
+            p{
+                width: 100%;
+            }
+        }
+    }
+}
+@include responsive('large'){
+    .intro{
+        .intro__tittle{
+            p{
+                width: 100%;
+            }
+        }
+    }
+}
